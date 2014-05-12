@@ -26,6 +26,10 @@ Pod::Spec.new do |s|
   s.source_files  = 'Opentok.framework/Versions/A/Headers/*.h'
   s.preserve_paths = 'Opentok.framework'
 
+  s.xcconfig     = { 
+    'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/OpenTokSDK-WebRTC/"'
+
+  }
 
   s.exclude_files = 'Opentok.framework/Versions/A/Resources/Info.plist'
 
