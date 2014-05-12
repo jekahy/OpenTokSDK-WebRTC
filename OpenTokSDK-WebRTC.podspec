@@ -36,4 +36,6 @@ Pod::Spec.new do |s|
   s.resources = ['Opentok.framework/Versions/A/Resources/opentok.bundle']
   s.frameworks = 'AudioToolbox', 'AVFoundation', 'CFNetwork', 'CoreAudio', 'CoreMedia', 'CoreTelephony', 'CoreVideo', 'MobileCoreServices', 'OpenGLES', 'QuartzCore', 'Security', 'SystemConfiguration', 'Opentok'
 
+  s.libraries = 'z', 'xml2', 'sqlite3', 'stdc++'
+
 end
