@@ -36,7 +36,8 @@ Pod::Spec.new do |s|
   other_ldflags = '$(inherited) -framework ' + other_frameworks.join(' -framework ') + ' -lz -lstdc++'
   
   s.xcconfig     = { 
-    'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)"',
+    'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/OpenTokSDK-WebRTC"
+  s.version      = "2.2""',
 
     'OTHER_LDFLAGS[arch=arm64]' => other_ldflags,
     'OTHER_LDFLAGS[arch=armv7]' => other_ldflags,
