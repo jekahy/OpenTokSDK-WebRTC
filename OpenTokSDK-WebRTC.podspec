@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name         = "opentok-ios-sdk-webrtc"
+  s.name         = "OpenTokSDK-WebRTC"
   s.version      = "2.2"
   s.summary      = "A podspec that wraps the OpenTok iOS WebRTC SDK and only links against ARM"
 
