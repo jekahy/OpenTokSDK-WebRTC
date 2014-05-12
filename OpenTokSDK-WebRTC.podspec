@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   s.xcconfig     = { 
     'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/OpenTokSDK-WebRTC/"',
 
-    'OTHER_LDFLAGS[arch=armv7]' => other_ldflags
+    'OTHER_LDFLAGS' => other_ldflags
   }
 
   s.exclude_files = 'Opentok.framework/Versions/A/Resources/Info.plist'
