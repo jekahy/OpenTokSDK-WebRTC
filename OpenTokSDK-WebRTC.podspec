@@ -26,17 +26,9 @@ Pod::Spec.new do |s|
   s.source_files  = 'Opentok.framework/Versions/A/Headers/*.h'
   s.preserve_paths = 'Opentok.framework'
 
-  other_frameworks =  ['AudioToolbox', 'AVFoundation', 'CFNetwork', 'CoreAudio', 'CoreMedia', 'CoreTelephony', 'CoreVideo', 'MobileCoreServices', 'OpenGLES', 'QuartzCore', 'Security', 'SystemConfiguration', 'Opentok']
-  
-  other_ldflags = '$(inherited) -framework ' + other_frameworks.join(' -framework ') + ' -lz -lstdc++'
-  
-  s.xcconfig     = { 
-    'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/OpenTokSDK-WebRTC/"',
-
-    'OTHER_LDFLAGS' => other_ldflags
-  }
 
   s.exclude_files = 'Opentok.framework/Versions/A/Resources/Info.plist'
 
   s.resources = ['Opentok.framework/Versions/A/Resources/opentok.bundle']
+  s.frameworks = 'AudioToolbox', 'AVFoundation', 'CFNetwork', 'CoreAudio', 'CoreMedia', 'CoreTelephony', 'CoreVideo', 'MobileCoreServices', 'OpenGLES', 'QuartzCore', 'Security', 'SystemConfiguration', 'Opentok'
 end
