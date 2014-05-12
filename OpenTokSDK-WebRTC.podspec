@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.source_files  = 'Opentok.framework/Versions/A/Headers/*.h'
   s.preserve_paths = 'Opentok.framework'
 
-  other_frameworks =  ['Opentok', 'AudioToolbox', 'AVFoundation', 'CFNetwork', 'CoreAudio', 'CoreMedia', 'CoreTelephony', 'CoreVideo', 'MobileCoreServices', 'OpenGLES', 'QuartzCore', 'Security', 'SystemConfiguration']
+  other_frameworks =  ['AudioToolbox', 'AVFoundation', 'CFNetwork', 'CoreAudio', 'CoreMedia', 'CoreTelephony', 'CoreVideo', 'MobileCoreServices', 'OpenGLES', 'QuartzCore', 'Security', 'SystemConfiguration', 'Opentok']
   
   other_ldflags = '$(inherited) -framework ' + other_frameworks.join(' -framework ') + ' -lz -lstdc++'
   
