@@ -34,5 +34,7 @@ Pod::Spec.new do |s|
   s.exclude_files = 'Opentok.framework/Versions/A/Resources/Info.plist'
 
   s.resources = ['Opentok.framework/Versions/A/Resources/opentok.bundle']
-  s.frameworks = 'AudioToolbox', 'AVFoundation', 'CFNetwork', 'CoreAudio', 'CoreMedia', 'CoreTelephony', 'CoreVideo', 'MobileCoreServices', 'OpenGLES', 'QuartzCore', 'Security', 'SystemConfiguration', 'Opentok', 'libz', 'libstdc++'
+  s.frameworks = 'AudioToolbox', 'AVFoundation', 'CFNetwork', 'CoreAudio', 'CoreMedia', 'CoreTelephony', 'CoreVideo', 'MobileCoreServices', 'OpenGLES', 'QuartzCore', 'Security', 'SystemConfiguration', 'Opentok'
+
+  s.libraries = 'libz', 'libstdc++'
 end
