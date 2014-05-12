@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
                    * that when running on the simulator.
                    DESC
 
-  s.homepage     = "http://github.com/jekahy"
+  s.homepage     = "http://github.com/jekahy/OpenTokSDK-WebRTC"
  
   s.license      = 'MIT (example)'
 
@@ -24,12 +24,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/jekahy/OpenTokSDK-WebRTC.git", :tag => "2.2" }
 
   s.source_files  = 'Opentok.framework/Versions/A/Headers/*'
-
   s.preserve_paths = 'Opentok.framework/*'
-
-  s.exclude_files  = 'Opentok.framework/Versions/A/Resources/Info.plist'
-
-  s.resources = ['Opentok.framework/Versions/A/Resources/*']
 
   other_frameworks =  ['Opentok', 'AudioToolbox', 'AVFoundation', 'CFNetwork', 'CoreAudio', 'CoreMedia', 'CoreTelephony', 'CoreVideo', 'MobileCoreServices', 'OpenGLES', 'QuartzCore', 'Security', 'SystemConfiguration']
   
@@ -38,7 +33,11 @@ Pod::Spec.new do |s|
   s.xcconfig     = { 
     'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/OpenTokSDK-WebRTC"',
 
-    'OTHER_LDFLAGS[arch=ARCHS_STANDARD_32_BIT]' => other_ldflags
+    'OTHER_LDFLAGS[arch=armv7]' => other_ldflags,
+    'OTHER_LDFLAGS[arch=armv7s]' => other_ldflags
   }
 
+  s.exclude_files = 'Opentok.framework/Versions/A/Resources/Info.plist'
+
+  s.resources = ['Opentok.framework/Versions/A/Resources/*']
 end
