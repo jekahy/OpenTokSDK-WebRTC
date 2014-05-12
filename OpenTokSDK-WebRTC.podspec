@@ -23,15 +23,15 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/jekahy/OpenTokSDK-WebRTC.git", :tag => "2.2" }
 
-  s.source_files  = 'Opentok.framework/Versions/A/Headers/*'
-  s.preserve_paths = 'Opentok.framework/*'
+  s.source_files  = 'Opentok.framework/Versions/A/Headers/*.h'
+  s.preserve_paths = 'Opentok.framework'
 
   other_frameworks =  ['Opentok', 'AudioToolbox', 'AVFoundation', 'CFNetwork', 'CoreAudio', 'CoreMedia', 'CoreTelephony', 'CoreVideo', 'MobileCoreServices', 'OpenGLES', 'QuartzCore', 'Security', 'SystemConfiguration']
   
   other_ldflags = '$(inherited) -framework ' + other_frameworks.join(' -framework ') + ' -lz -lstdc++'
   
   s.xcconfig     = { 
-    'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/OpenTokSDK-WebRTC"',
+    'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/OpenTokSDK-WebRTC/"',
 
     'OTHER_LDFLAGS[arch=armv7]' => other_ldflags,
     'OTHER_LDFLAGS[arch=armv7s]' => other_ldflags
@@ -39,5 +39,5 @@ Pod::Spec.new do |s|
 
   s.exclude_files = 'Opentok.framework/Versions/A/Resources/Info.plist'
 
-  s.resources = ['Opentok.framework/Versions/A/Resources/*']
+  s.resources = ['Opentok.framework/Versions/A/Resources/opentok.bundle']
 end
