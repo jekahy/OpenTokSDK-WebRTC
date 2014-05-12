@@ -13,11 +13,11 @@ Pod::Spec.new do |s|
                    * that when running on the simulator.
                    DESC
 
-  s.homepage     = "http://github.com/augustj"
+  s.homepage     = "http://github.com/jekahy"
  
   s.license      = 'MIT (example)'
 
-  s.author       = { "August Jaenicke" => "august@carbonfive.com" }
+  s.author       = { "Eugene Hyrol" => "jekahy@gmail.com" }
 
   s.platform     = :ios, '6.1'
 
@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   other_ldflags = '$(inherited) -framework ' + other_frameworks.join(' -framework ') + ' -lz -lstdc++'
   
   s.xcconfig     = { 
-    'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/opentok-ios-sdk-webrtc"',
+    'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)"',
 
     'OTHER_LDFLAGS[arch=arm64]' => other_ldflags,
     'OTHER_LDFLAGS[arch=armv7]' => other_ldflags,
