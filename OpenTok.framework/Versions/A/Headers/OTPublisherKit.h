@@ -78,20 +78,15 @@
 
 /**
  * A string that will be associated with this publisher's stream. This string is
- * displayed at the bottom of publisher
- * videos and at the bottom of subscriber videos associated with the published
- * stream. You can set this name after
- * initializing the publisher and before sending the
- * <[OTSession publish:error:]> message. Setting the property after
- * sending the <[OTSession publish:error:]> message has no effect on the name
- * displayed for the stream.
+ * displayed at the bottom of subscriber videos associated with the published
+ * stream, if an overlay to display the name exists. 
  *
- * Note that you can also set the name when you send the
+ * Name must be set at initialization, when you when you send the
  * <[OTPublisherKit initWithDelegate:name:]> message.
  *
  * This value defaults to an empty string.
  */
-@property(nonatomic, copy) NSString* name;
+@property(readonly) NSString* name;
 
 /** @name Controlling audio and video output for a publisher */
 
